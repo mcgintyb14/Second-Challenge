@@ -62,14 +62,14 @@ header {
     font-weight: bold;
 }
 
-.About-Me {
+#About-Me {
 display: flex;
 flex-direction: row;
 justify-content: space-between;
 margin-top: 50px;
 }
 
-.About-Me h1 {
+#About-Me h1 {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -78,24 +78,24 @@ margin-top: 50px;
     width: 20%;
     padding-right: 20px;
     border-right: solid rgb(31, 150, 150);
-    border-width: 10px;
+    border-width: 5px;
     height: 500px;
 }
 
-.About-Me p {
+#About-Me p {
     text-align: left;
     font-size: 30px;
     width: 75%;
 }
 
-.Work {
+#Work {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 200px;
 }
 
-.Work h1 {
+#Work h1 {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -104,24 +104,24 @@ margin-top: 50px;
     width: 20%;
     padding-right: 20px;
     border-right: solid rgb(31, 150, 150);
-    border-width: 10px;
+    border-width: 5px;
     height: 500px;
 }
 
-.Work p {
+#Work p {
     text-align: left;
     font-size: 30px;
     width: 75%;
 }
 
-.Contact-Me {
+#Contact-Me {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 200px;
 }
 
-.Contact-Me h1 {
+#Contact-Me h1 {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -130,14 +130,15 @@ margin-top: 50px;
     width: 20%;
     padding-right: 20px;
     border-right: solid rgb(31, 150, 150);
-    border-width: 10px;
+    border-width: 5px;
     height: 100px;
+    margin-left: 7.55%;
 }
 
-.Contact-Me p {
-    text-align: right;
-    font-size: 20px;
-    width: 75%;
+#Contact-Me p {
+    text-align: left;
     padding-left: 100px;
-    padding-top: 50px;
+    font-size: 22px;
+    width: 75%;
+
 }

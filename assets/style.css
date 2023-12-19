@@ -1,6 +1,7 @@
 body {
     display: flex;
     flex-direction: column;
+    background-color: beige;
 }
 
 header {
@@ -18,7 +19,7 @@ header {
     position: absolute;
     top: 20px;
     background-color: rgb(31, 150, 150);
-    color: rgb(43, 45, 46);
+    color: white;
     width: 20%;
     height: 50px;
     right: 82%;
@@ -26,7 +27,7 @@ header {
     padding-top: 5px;
     padding-right: 10px;
     font-size: 35px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 600;
 }
 
@@ -62,56 +63,82 @@ header {
     font-weight: bold;
 }
 
-#About-Me {
+.About-Me {
 display: flex;
 flex-direction: row;
 justify-content: space-between;
 margin-top: 50px;
 }
 
-#About-Me h1 {
+
+
+.About-Me h1,
+#Work h1,
+#Contact-Me h1 {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    text-align: right;
     font-size: 70px;
     font-weight: bold;
-    width: 20%;
+    width: 15%;
     padding-right: 20px;
     border-right: solid rgb(31, 150, 150);
     border-width: 5px;
-    height: 500px;
+    height: 400px;
 }
 
-#About-Me p {
+.About-Me p {
     text-align: left;
-    font-size: 30px;
+    font-size: 25px;
     width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-right: 5%;
 }
+
+#bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 30px;
+}
+
 
 #Work {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     margin-top: 200px;
-}
-
-#Work h1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    font-size: 70px;
-    font-weight: bold;
-    width: 20%;
-    padding-right: 20px;
-    border-right: solid rgb(31, 150, 150);
-    border-width: 5px;
-    height: 500px;
 }
 
 #Work p {
     text-align: left;
     font-size: 30px;
     width: 75%;
+}
+
+.work-links {
+    display: flex;
+    display: block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    color: white;
+    height: 350px;
+    width: 300px;
+    margin-left: 10%;
+}
+
+.work-links1 {
+    background-image: url(./Images/nature-stock-photo.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.work-links2 {
+    background-image: url(./Images/beach-quotes-1559667853.jpg);
 }
 
 #Contact-Me {
@@ -122,23 +149,12 @@ margin-top: 50px;
 }
 
 #Contact-Me h1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    font-size: 70px;
-    font-weight: bold;
-    width: 20%;
-    padding-right: 20px;
-    border-right: solid rgb(31, 150, 150);
-    border-width: 5px;
-    height: 100px;
-    margin-left: 7.55%;
+    height: 200px;
 }
 
 #Contact-Me p {
     text-align: left;
     padding-left: 100px;
     font-size: 22px;
-    width: 75%;
 
 }

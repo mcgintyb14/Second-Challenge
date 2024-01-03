@@ -9,6 +9,10 @@ The section - and main - section of the page is the 'Work' section which display
 
 The last section of the body of the page is the 'Contact Me' section which includes working links to my cell phone number, my email, and my Github account. This is to be used for any potential visitor to contact me as needed.
 
+Note that I have also included multiple media queries for the page to help readability and usage for smaller screen resolutions. Also note that this does not strictly follow the breaks for popular devices, but rather has breaks that align with the page and structure itself. This is why the first break executes at a width of 1200px to reduce the overall font sizes as well as adjust the layout of the images in the 'Work' section, making them smaller and display as a flex column instead. 
+
+Additional queries were added for 850px, 768px, and 692px to further reduce font sizes for smaller resolutions. 
+
 ## Installation
 N/A: There are no installation instructions for this page as no downloads should be necessary
 

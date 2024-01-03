@@ -4,10 +4,15 @@
     box-sizing: border-box;
 }
 
+/* The below code defines root variables for background color and page margin that are applied to elements throughout the page */
+
 :root {
     --background-color: rgb(31, 150, 150);
     --page-margin: 100px;
 }
+
+/* The below code defines the layout for the body of the HTML, defining it as a flexbox layout with its children sections 
+dislpayed as a column with a black background color */
 
 body {
     display: flex;
@@ -16,6 +21,9 @@ body {
     margin: 0px;
     padding: 0;
 }
+
+/* The below code defines the layout of the header section of the page, which is displayed using flexbox as a row, and with the width
+of the child elements being displayed as a row. The flexbox layout also helps with responsiveness */
 
 header {
     display: flex;
@@ -28,6 +36,10 @@ header {
     color: white;
     box-shadow: 2px 5px 5px 2px rgba(0, 0, 0, 0.3);
 }
+
+/* The below code defines the layout of my name within the header element. The position of the name is a relative position based
+on the position of the parent element (header), and is fixed to stay on the left hand side of the screen, with the text being 
+fixed in its alignment as well. */
 
 .name {
     align-self: flex-start;
@@ -45,6 +57,9 @@ header {
     font-weight: 600;
 }
 
+/* The below code is defining the layout of the links in the header of the page. This is a flexbox layout to display the links as a row, and the flexwrap
+property is ensuring that as the screen gets smaller, the links will begin to wrap under each other to make more space */
+
 .links {
     display: flex;
     flex-direction: row;
@@ -59,6 +74,9 @@ header {
 
 }
 
+/* The below code is ensuring that each list item within the "links" class is displayed as an inline block, and that within the "links" container,
+they will be displayed in the center both horizontally and vertically */
+
 .links li {
     display: inline-block;
     margin-left: 60px;
@@ -69,11 +87,15 @@ header {
     white-space: nowrap;
 }
 
+/* The below code is simply specifying that the links themselves (a) will be in white font with set padding around them */
+
 .links a {
     color: white;
     font-weight: normal; 
     padding: 10px 20px;
 }
+
+/* The below code specifies that whenever a user hovers over any of the links in the header, the font will become bold and change to a beige color */
 
 .links a:hover {
     color: beige;
@@ -81,9 +103,14 @@ header {
     margin-left: -5.5px;
 }
 
+/* The below code simply defines that all text within any sections of the page will be in white */
+
 section {
     color: white
 }
+
+/* The below code is what drives the "subtitle" background image displayed below the header. This css code is ensuring that the width of the image
+spans 100% of the screen at a set height of 400px. */
 
 #subtitle {
     display: flex;
@@ -95,9 +122,13 @@ section {
     background-size: cover;
 }
 
+/* The below code is defining the sub-header displayed on top of the background image. This is defining the grey background color of the box 
+as well as the black text color of the sub-header itself. The positioning layout was defined so that the sub-header is in a fixed position
+on the page */
+
 #subtitle-header {
     display: flex;
-    justify-content: center; /* Optional: Horizontal centering */
+    justify-content: center;
     align-items: center;
     background-color: rgba(156, 142, 142, 0.726);
     color: black;
@@ -112,6 +143,10 @@ section {
     
 }
 
+/* The below code is defining the styles of each H2 header on the page, seen on the left-hand side of the screen. This is done using
+flex properties in the first line of code, and ensuring that the text is aligned to the right hand side of the container. The border 
+property in this line of code is what gives the consistent "line" down the left hand side of the screen. */
+
 #about-header,
 #Work-Header,
 #contact-header {
@@ -123,6 +158,9 @@ section {
    line-height: 1.1;
 }
 
+/* The below code defines the layout of the container with the id "About Me" in the HTML code. This code ensures that this specific container
+displays as a row on the page, maximizing the space between the child elements. */
+
 #About-Me {
     display: flex;
     flex-direction: row;
@@ -131,6 +169,8 @@ section {
     width: 100%;
     }
     
+/* The below code is defining the style of the paragraphs within the 'About Me' section of the page. This is again done using flexbox
+but this time it is specifying it to display as a column (otherwise the paragraphs would display as a row side-by-side. */
 
 #About-Me p {
     text-align: left;
@@ -143,6 +183,9 @@ section {
     margin-right: 5%;
 }
 
+/* The below code is providing properties for the "bio" ID container which contains both paragraphs within the 'About Me' section. 
+This is specific to the container itself and not the child elements (ie the paragraphs) */
+
 #bio {
     display: flex;
     flex-direction: column;
@@ -150,10 +193,17 @@ section {
     margin-left: 30px;
 }
 
+/* The below code is simply defining the layout of the individual paragraphs within the 'About Me' section. This is saying that the paragraphs
+should be 80% the width of the container (the parent element with id "bio") */
+
 #bio p {
     text-align: justify;
     width: 80%;
 }
+
+/* The below code is defining the layout of each of the three sections in the body of the page, each defined by specifc IDs shown 
+below. What this is doing is making sure each of these sections display as a row and have defined margins and paddings that are
+consistent throughout the page. This is to make sure the borders are all aligned. */
 
 #Work,
 #Contact-Me,
@@ -166,11 +216,9 @@ section {
     padding-right: 0;
 }
 
-
-.About-Me {
-    margin-top: 50px
-}
-
+/* The below code is defining the style of each of the cards / links within the "Work" section of the page. This is defining a flexbox layout
+to display the cards as a row, and to have them aligned to the center of the container. It is also ensuring they have flexwrap so that
+they will wrap around when the screen narrows.*/
 
 .work-links {
     display: flex;
@@ -184,6 +232,9 @@ section {
     margin-right: 0px;
 }
 
+/* The below code is defining the style of the links (i.e. cards) themselves. This is making sure they flex display as a row with the 
+main text being displayed at the left (flex start). */
+
 .work-links a {
     display: flex;
     flex-direction: row;
@@ -194,6 +245,10 @@ section {
     margin-left: 100px;
     margin-right: 10px;
 }
+
+/* The below code is defining the specifc properties of each individual card within the "Work" section. This is mainly setting 
+consistent sizes for each card, as well as defining their positions relative to each other. Background properties defined here apply
+to the background images applied to each individual card. */
 
 #work-links1,
 #work-links2,
@@ -214,6 +269,9 @@ section {
     margin-right: 60px;
 }
 
+/* The below code is adding a hover property to each image. Specifcally, each card is given a default "blur" filter set above, and
+whenever they are hovered, they remove the filter making the images clear. */
+
 #work-links1:hover,
 #work-links2:hover,
 #work-links3:hover,
@@ -221,6 +279,8 @@ section {
     filter: none;
     border: solid var(--background-color) 5px;
 }
+
+/* The below code is specifiying a specifc size for the first image / link in the Work section to make it larger than the rest. */
 
 #work-links1 {
     background-image: url(./Images/nature-stock-photo.jpg);
@@ -230,6 +290,8 @@ section {
     max-width: 500px;
     flex-basis: 100%;
 }
+
+/* The below three lines of code set background images for the different links. */
 
 #work-links2 {
     background-image: url(./Images/beach-quotes-1559667853.jpg);
@@ -244,6 +306,9 @@ section {
     background-image: url(./Images/photo-1589802829985-817e51171b92.avif);
 }
 
+/* The below code is specifying the style of the sub-headers within each link. Note this refers to the boxes within the links that 
+tell you which coding languages were utlized for the different projects.  */
+
 .card {
     position: relative;
     top: 70%;
@@ -253,10 +318,14 @@ section {
     height: 500px;
 }
 
+/* The below code specifies that the "Contact Me" section (inclusive of its children) will have no margin or padding to the right */
+
 #Contact-Me {
     margin-right: 0px;
     padding-right: 0px;
 }
+
+/* The below code is defining the style of the container for the contact links at the bottom. This is making sure this container displays the links / contacts in a row, spaced evenly, and with set padding between them. */
 
 #Contact-Links {
     display: flex;
@@ -267,6 +336,9 @@ section {
     padding-left: 1px;
     font-size: 20px;
 }
+
+/* The below code targets the specifc links within the "Contact Me" section, ensuring that the links again display as a row, aligned to the center, and with even space between them.
+This also makes sure the text color of each link is white instead of the default */
 
 #Contact-Links a {
     display: flex;
@@ -279,7 +351,9 @@ section {
     color: white;
 }
 
-@media screen and (max-width: 1200px ) {
+/* The below code represents different media queries for custom breakpoints for the page. This was done so that the page is responsive to any resolution changes */
+
+@media screen and (max-width: 1100px ) {
     .About-Me h1,
     #Work h1,
     #Contact-Me h1 {

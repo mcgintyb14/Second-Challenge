@@ -130,7 +130,7 @@ on the page */
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(156, 142, 142, 0.726);
+    background-image: linear-gradient(to bottom, var(--background-color), white);
     color: black;
     height: 60px;
     width: 400px;
@@ -140,7 +140,6 @@ on the page */
     top: 84%;
     border-radius: 8px;
     text-align: center;
-    
 }
 
 /* The below code is defining the styles of each H2 header on the page, seen on the left-hand side of the screen. This is done using

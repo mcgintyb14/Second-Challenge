@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -180,6 +181,7 @@ section {
     padding-left: 100px;
     margin-left: 15px;
     padding-right: 0px;
+    margin-right: 0px;
 }
 
 .work-links a {
@@ -343,6 +345,19 @@ section {
     .name {
         font-size: 16px
     }
+    #work-links1,
+    #work-links2,
+    #work-links3,
+    #work-links4 {
+        height: 50%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+}
+#Contact-Links a {
+    margin: 10px;
+}
+
 }    
 
 @media screen and (max-width: 768px ) {

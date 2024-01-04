@@ -368,7 +368,14 @@ This also makes sure the text color of each link is white instead of the default
 /* The below code represents different media queries for custom breakpoints for the page. This was done so that the page is responsive to any resolution changes */
 
 @media screen and (max-width: 1300px ) {
-    .About-Me h1,
+
+    #Work, 
+    #About-Me,
+    #Contact-Me {
+        margin-left: 10px;
+    }
+
+    #About-Me h1,
     #Work h1,
     #Contact-Me h1 {
         font-size: 30px;
@@ -437,6 +444,9 @@ This also makes sure the text color of each link is white instead of the default
 }
 
 @media screen and (max-width: 850px) {
+
+    
+
     .header {
        display: flex;
        flex-direction: column;

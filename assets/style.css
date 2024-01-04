@@ -18,20 +18,20 @@ body {
     display: flex;
     flex-direction: column;
     background-color: black;
-    margin: 0px;
+    margin: 0;
     padding: 0;
 }
 
 /* The below code defines the layout of the header section of the page, which is displayed using flexbox as a row, and with the width
 of the child elements being displayed as a row. The flexbox layout also helps with responsiveness */
 
-header {
+.header {
     display: flex;
     flex-direction: row;
     flex-basis: auto;
     justify-content: space-between;
     width: 100%;
-    height: 100px;
+    height: 150px;
     background-color: rgb(43, 45, 46);
     color: white;
     box-shadow: 2px 5px 5px 2px rgba(0, 0, 0, 0.3);
@@ -56,6 +56,13 @@ fixed in its alignment as well. */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 600;
 }
+
+#selfie {
+    height: 150px;
+    width: 130px;
+    display: inline-block;
+}
+
 
 /* The below code is defining the layout of the links in the header of the page. This is a flexbox layout to display the links as a row, and the flexwrap
 property is ensuring that as the screen gets smaller, the links will begin to wrap under each other to make more space */
@@ -134,7 +141,7 @@ Also added a linear gradient to make the box more aesthetic*/
     background-image: linear-gradient(to bottom, var(--background-color), white); 
     color: black;
     height: 60px;
-    width: 400px;
+    width: 140%;
     font-weight: 700;
     font-size: 20px;
     position: relative;
@@ -161,14 +168,7 @@ property in this line of code is what gives the consistent "line" down the left 
 /* The below code defines the layout of the container with the id "About Me" in the HTML code. This code ensures that this specific container
 displays as a row on the page, maximizing the space between the child elements. */
 
-#About-Me {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 50px;
-    width: 100%;
-    }
-    
+
 /* The below code is defining the style of the paragraphs within the 'About Me' section of the page. This is again done using flexbox
 but this time it is specifying it to display as a column (otherwise the paragraphs would display as a row side-by-side. */
 
@@ -191,6 +191,8 @@ This is specific to the container itself and not the child elements (ie the para
     flex-direction: column;
     align-items: space-around;
     margin-left: 30px;
+    margin-right: 20px;
+    width: 100%;
 }
 
 /* The below code is simply defining the layout of the individual paragraphs within the 'About Me' section. This is saying that the paragraphs
@@ -225,7 +227,6 @@ they will wrap around when the screen narrows.*/
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    color: white;
     padding-left: 100px;
     margin-left: 15px;
     padding-right: 0px;
@@ -235,15 +236,26 @@ they will wrap around when the screen narrows.*/
 /* The below code is defining the style of the links (i.e. cards) themselves. This is making sure they flex display as a row with the 
 main text being displayed at the left (flex start). */
 
-.work-links a {
+ .work-links div{
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    height: 350px;
-    width: 100px;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 40%;
+    width: 40%;
     font-size: 20px;
-    margin-left: 100px;
+    color: black;
+    margin-left: 10px;
     margin-right: 10px;
+    background-image: linear-gradient(to bottom, var(--background-color), white); 
+    position: relative;
+    top: 60%;
+    border-radius: 8px;
+}
+
+.work-links div h4{
+    margin-top: 10px;
+    font-size: 80%;
+    padding-bottom: 10px;
 }
 
 /* The below code is defining the specifc properties of each individual card within the "Work" section. This is mainly setting 
@@ -259,7 +271,7 @@ to the background images applied to each individual card. */
     background-position: center;
     min-width: 400px;
     min-height: 200px;
-    max-width: 500px;
+    max-width: 400px;
     max-height: 300px;
     margin-right: 10px;
     color: white;
@@ -285,10 +297,10 @@ whenever they are hovered, they remove the filter making the images clear. */
 #work-links1 {
     background-image: url(./Images/nature-stock-photo.jpg);
     min-height: 400px;
-    min-width: 100%;
-    max-height: 500px;
-    max-width: 500px;
-    flex-basis: 100%;
+    min-width: 90%;
+    max-height: 400px;
+    max-width: 400px;
+
 }
 
 /* The below three lines of code set background images for the different links. */
@@ -312,10 +324,11 @@ tell you which coding languages were utlized for the different projects.  */
 .card {
     position: relative;
     top: 70%;
-    background-color: var(--background);
+    background-color: lightblue;
+    color: black;
     border-radius: 6px;
     box-shadow: 2px 5px 5px 2px rgba(0, 0, 0, 0.3);
-    height: 500px;
+    height: 100px;
 }
 
 /* The below code specifies that the "Contact Me" section (inclusive of its children) will have no margin or padding to the right */
@@ -349,15 +362,16 @@ This also makes sure the text color of each link is white instead of the default
     padding-bottom: 3px;
     padding-top: 50px;
     color: white;
+    margin-right: 0px;
 }
 
 /* The below code represents different media queries for custom breakpoints for the page. This was done so that the page is responsive to any resolution changes */
 
-@media screen and (max-width: 1100px ) {
+@media screen and (max-width: 1300px ) {
     .About-Me h1,
     #Work h1,
     #Contact-Me h1 {
-        font-size: 30px !important;
+        font-size: 30px;
         border: none;
     }
 
@@ -395,8 +409,10 @@ This also makes sure the text color of each link is white instead of the default
     #work-links2,
     #work-links3,
     #work-links4 {
-        height: 320px;
+        height: 220px;
         width: 210px;
+        display: flex;
+        flex-wrap: wrap;
     }
     .About-Me {
         display: flex;
@@ -419,34 +435,59 @@ This also makes sure the text color of each link is white instead of the default
     .name {
         font-size: 16px
     }
-    #work-links1,
     #work-links2,
     #work-links3,
     #work-links4 {
-        height: 50%;
-        width: 50%;
+        height: 180px;
+        width: 120px;
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
 }
+
+    #work-links1 {
+        width: 100px;
+    }
+
 #Contact-Links a {
     margin: 10px;
 }
 
-}    
-
-@media screen and (max-width: 768px ) {
-    body {
-    font-size: .5em;
-    }
+#subtitle-header {
+    width: 150%;
+    font-size: 14px;
 }
 
-@media screen and (max-width: 692px) {
+#selfie {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+}   
+
+
+@media screen and (max-width: 768px ) {
+    #selfie {
+        margin-left: 20px;
+    } */
+
+}
+
+@media screen and (max-width: 735px) {
     .name {
         font-size: 13px;
+        /* width: 45%; */
     }
 
     .links li {
         font-size: 13px;
     }
-    
+}
+
+@media screen and (max-width: 440px) {
+    #bio {
+        font-size: 5px;
+    }
 }

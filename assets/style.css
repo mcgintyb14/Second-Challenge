@@ -241,8 +241,8 @@ main text being displayed at the left (flex start). */
     flex-direction: column;
     justify-content: space-around;
     height: 40%;
-    width: 40%;
-    font-size: 20px;
+    width: 70%;
+    font-size: 13px;
     color: black;
     margin-left: 10px;
     margin-right: 10px;
@@ -250,6 +250,14 @@ main text being displayed at the left (flex start). */
     position: relative;
     top: 60%;
     border-radius: 8px;
+}
+
+/* This makes sure that the card tagged to the largest link will have a different height, width, and font size */
+
+#card1 {
+    height: 100px;
+    width: 20%;
+    font-size: 20px;
 }
 
 .work-links div h4{
@@ -316,19 +324,6 @@ whenever they are hovered, they remove the filter making the images clear. */
 
 #work-links4 {
     background-image: url(./Images/photo-1589802829985-817e51171b92.avif);
-}
-
-/* The below code is specifying the style of the sub-headers within each link. Note this refers to the boxes within the links that 
-tell you which coding languages were utlized for the different projects.  */
-
-.card {
-    position: relative;
-    top: 70%;
-    background-color: lightblue;
-    color: black;
-    border-radius: 6px;
-    box-shadow: 2px 5px 5px 2px rgba(0, 0, 0, 0.3);
-    height: 100px;
 }
 
 /* The below code specifies that the "Contact Me" section (inclusive of its children) will have no margin or padding to the right */

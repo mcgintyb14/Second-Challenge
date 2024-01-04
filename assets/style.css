@@ -269,10 +269,10 @@ to the background images applied to each individual card. */
     position: relative;
     background-size: cover;
     background-position: center;
-    min-width: 400px;
+    min-width: 200px;
     min-height: 200px;
-    max-width: 400px;
-    max-height: 300px;
+    max-width: 300px;
+    max-height: 200px;
     margin-right: 10px;
     color: white;
     filter: blur(1px);
@@ -412,6 +412,7 @@ This also makes sure the text color of each link is white instead of the default
         height: 220px;
         width: 210px;
         display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
     }
     .About-Me {
@@ -429,24 +430,59 @@ This also makes sure the text color of each link is white instead of the default
         margin-bottom: 30px;
     }
 
+    .work-links a {
+        width: 100px;
+        height: 100px;
+    }
 }
 
 @media screen and (max-width: 850px) {
-    .name {
-        font-size: 16px
+    .header {
+       display: flex;
+       flex-direction: column;
+        height: 20%;
     }
+
+    .name {
+        font-size: 13px;
+        width: 40%;
+    }
+
+    .work-links {
+        padding-left: 10px;
+    }
+
+    #selfie {
+        margin-left: 20px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+   
+    #work-links1,
     #work-links2,
     #work-links3,
     #work-links4 {
-        height: 180px;
-        width: 120px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-}
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        max-width: 100px;
+        max-height: 100px;
+        margin-right: 10px;
+        color: white;
+        filter: blur(1px);
+        transition: .2s ease;
+        margin: 10px;
+    }
 
     #work-links1 {
         width: 100px;
+        max-height: 50px;
+    }
+
+    .work-links div {
+        font-size: 50%;
+        height: 30%
     }
 
 #Contact-Links a {
@@ -471,7 +507,7 @@ This also makes sure the text color of each link is white instead of the default
 @media screen and (max-width: 768px ) {
     #selfie {
         margin-left: 20px;
-    } */
+    } 
 
 }
 
